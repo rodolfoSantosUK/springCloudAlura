@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import br.com.microservice.fornecedor.model.InfoFornecedor;
 
+
 @Repository
 public interface InfoRepository extends CrudRepository<InfoFornecedor, Long  > {
 

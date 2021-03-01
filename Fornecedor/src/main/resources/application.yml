@@ -1,17 +1,28 @@
 server:
-  port: 8083
+  port: 8084
 
 spring:
- datasource:
-  url: jdbc:h2:mem:testdb
-  driverClassName: org.h2.Driver
-  username: sa
-  password: sa
+  application:
+    name: 'fornecedor'
 
- jpa:
-  database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
 
- h2:
-  console:
-    enabled: true
-    path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
