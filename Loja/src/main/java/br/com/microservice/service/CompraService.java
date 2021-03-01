@@ -2,11 +2,13 @@ package br.com.microservice.service;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import br.com.microservice.dto.CompraDTO;
 import br.com.microservice.dto.InfoFornecedorDTO;
 
+@Service
 public class CompraService {
 
 	public void realizaCompra(CompraDTO compra) { 
